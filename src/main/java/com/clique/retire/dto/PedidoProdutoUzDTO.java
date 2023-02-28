@@ -1,0 +1,16 @@
+package com.clique.retire.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PedidoProdutoUzDTO {
+
+	private Integer codigoProduto;
+	private String uz;
+	private Integer codigoPedido;
+	
+}

@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pedidoSeparacao" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1b5e5a4-a3ec-49b4-8d84-6b084b4607a1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="165"/>
+	<style name="Table_TH" mode="Opaque" backcolor="rgba(229, 240, 250, 0.0)">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="listProduto" uuid="77db89cc-8796-4fe1-ad9f-4811f4a8c968">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="ARAUJO_TEM" class="java.lang.Boolean"/>
+		<parameter name="VENCIMENTO_CURTO" class="java.lang.Boolean"/>
+		<parameter name="SUPER_VENDEDOR" class="java.lang.Boolean"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="codigo" class="java.lang.String"/>
+		<field name="descricao" class="java.lang.String"/>
+		<field name="codBarras" class="java.lang.String"/>
+		<field name="quantidade" class="java.lang.String"/>
+		<field name="estoque" class="java.lang.String"/>
+		<field name="secao" class="java.lang.String"/>
+		<field name="numPrePedido" class="java.lang.String"/>
+		<field name="dataValidadePedidoVencCurtoFormat" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="EMOJI_FELIZ" class="java.io.InputStream"/>
+	<parameter name="FILIAL" class="java.lang.String"/>
+	<parameter name="QRCODE" class="java.io.InputStream"/>
+	<parameter name="EMOJI_TRISTE" class="java.io.InputStream"/>
+	<parameter name="PALMAS" class="java.io.InputStream"/>
+	<parameter name="PALMAS_DOIS" class="java.io.InputStream"/>
+	<parameter name="IS_IMPRIMIR_TUTORIAL" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<parameter name="VIA_MOTO" class="java.lang.Boolean"/>
+	<parameter name="CONTROLADO" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MSG_NOVA_COMANDA" class="java.lang.String"/>
+	<parameter name="HAS_CANHOTO" class="java.lang.Boolean"/>
+	<parameter name="CONTAINS_ITEM_NORMAL" class="java.lang.Boolean" isForPrompting="false"/>
+	<parameter name="CONTAINS_ITEM_ESPECIAL" class="java.lang.Boolean" isForPrompting="false"/>
+	<parameter name="ISRAPPIORIFOOD" class="java.lang.Boolean"/>
+	<parameter name="ISVACINA" class="java.lang.Boolean"/>
+	<parameter name="ISCONTROLADO" class="java.lang.Boolean"/>
+	<parameter name="ISANTIBIOTICO" class="java.lang.Boolean"/>
+	<parameter name="ISINSTRUCAO" class="java.lang.Boolean"/>
+	<parameter name="CORTE_AQUI" class="java.io.InputStream"/>
+	<parameter name="EXCLAMACAO_CINZA_ESQUERDA" class="java.io.InputStream"/>
+	<parameter name="EXCLAMACAO_CINZA_DIREITA" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numPrateleira" class="java.lang.String"/>
+	<field name="nomeCliente" class="java.lang.String"/>
+	<field name="numPedido" class="java.lang.String"/>
+	<field name="emitidoEm" class="java.lang.String"/>
+	<field name="listProduto" class="java.util.List"/>
+	<field name="filial" class="java.lang.String"/>
+	<field name="tipoRetirada" class="java.lang.String"/>
+	<field name="tokenBox" class="java.lang.String"/>
+	<field name="idPedidoVtex" class="java.lang.String"/>
+	<field name="nomeVendedor" class="java.lang.String"/>
+	<field name="codTipoRetirada" class="java.lang.String"/>
+	<field name="codBox" class="java.lang.String"/>
+	<field name="filialOrigemAraujoTem" class="java.lang.String"/>
+	<field name="pedidoAraujoTem" class="java.lang.Boolean"/>
+	<field name="idFilialOrigemAraujoTem" class="java.lang.Integer"/>
+	<field name="pedidoPossuiVencCurto" class="java.lang.Boolean"/>
+	<field name="mensagemControlado" class="java.lang.String"/>
+	<field name="etapaMensagem" class="java.lang.String"/>
+	<field name="complemento" class="java.lang.String"/>
+	<field name="mensagemTipoPassoDois" class="java.lang.String"/>
+	<field name="mensagemDescricaoPassoDois" class="java.lang.String"/>
+	<field name="canalVenda" class="java.lang.String"/>
+	<field name="superVendedor" class="java.lang.Boolean"/>
+	<field name="pedidoQuatroPontoZero" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[pedidoQuatroPontoZero]]></fieldDescription>
+	</field>
+	<field name="receitaDigital" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[receitaDigital]]></fieldDescription>
+	</field>
+	<field name="pacientes" class="java.lang.String">
+		<fieldDescription><![CDATA[pacientes]]></fieldDescription>
+	</field>
+	<field name="pagamentoEmDinheiro" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[pagamentoEmDinheiro]]></fieldDescription>
+	</field>
+	<field name="troco" class="java.lang.String">
+		<fieldDescription><![CDATA[troco]]></fieldDescription>
+	</field>
+	<field name="valorTotalPedido" class="java.lang.String">
+		<fieldDescription><![CDATA[valorTotalPedido]]></fieldDescription>
+	</field>
+	<group name="GroupVencimentoCurto">
+		<groupHeader>
+			<band height="53">
+				<printWhenExpression><![CDATA[!$F{pedidoAraujoTem} && $F{pedidoPossuiVencCurto}]]></printWhenExpression>
+				<staticText>
+					<reportElement x="0" y="0" width="556" height="53" forecolor="#030000" uuid="b7f1b147-9130-42a3-92c6-7e6fab6670ff">
+						<printWhenExpression><![CDATA[!$F{pedidoQuatroPontoZero}]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="DejaVu Sans" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ATENÇÃO!! ESTE PEDIDO CONTÉM PRODUTOS COM VENCIMENTO CURTO!]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupPrimeiroPasso">
+		<groupHeader>
+			<band height="102">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<componentElement>
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="27" width="555" height="70" uuid="876dc7df-7ac7-4ec3-aea7-246911930914">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="listProduto" uuid="7e659fbf-56e2-4c57-84f2-5b4e1b55bb54">
+							<datasetParameter name="ARAUJO_TEM">
+								<datasetParameterExpression><![CDATA[$F{pedidoAraujoTem}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="VENCIMENTO_CURTO">
+								<datasetParameterExpression><![CDATA[$F{pedidoPossuiVencCurto}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="SUPER_VENDEDOR">
+								<datasetParameterExpression><![CDATA[$F{superVendedor}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listProduto})]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="60" uuid="9dc1ce2b-6520-42be-97e9-56ab423a4987">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="60" height="30" uuid="8cf681fa-0e5c-4f90-a766-e8636af1cdc5"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Seção]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="60" height="30" uuid="3ce78745-6ed0-4829-9f6b-78d931da7305"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{secao}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="50" uuid="50855bf4-49c4-4b9f-9ce9-6a0a22db9056">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+								<staticText>
+									<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="50" height="30" uuid="acc70ec4-65a8-40fd-a56a-694d5e2d2b79"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Separar]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="50" height="30" uuid="819fa6ad-d05e-431e-a044-c5a054f70b5b"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<paragraph lineSpacing="Single"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="160" uuid="f66645ca-5e0f-4c77-8a42-acf849a78968">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="160" height="30" uuid="f20385f0-7013-4770-87f0-0734377a9ee6"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Descrição do Produto]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="160" height="30" uuid="61e7ef6e-31e8-4643-9e18-e821001b70bb"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="111" uuid="f9042604-d5af-4558-89df-e73adb3b5691">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="111" height="30" uuid="70c3c9fb-7ed4-4323-8275-953c023cb37e"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Cód. Barras]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="111" height="30" uuid="c7444883-1ea7-4503-a1bf-356ec0892374"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{codBarras}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="59" uuid="4cbf6259-45c6-45c1-bdab-8703e581e1ae">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="59" height="30" uuid="e71b6e9c-8b3d-48fd-8ccd-c6bf24f40903"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Cód. Interno]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="59" height="30" uuid="54f7d857-df8a-4ea4-80a8-b97c93bb9e19"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="61" uuid="d2b5e7e2-4055-4519-9ce1-ddb3916c2c9f">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="61" height="30" uuid="75f99e21-783b-45e8-a290-96098b4bb5a0"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Estoque loja]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="61" height="30" uuid="3e03e3a4-91e8-443b-8057-01113f9835fc"/>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{estoque}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="55" uuid="10e0734e-fb0d-4544-83ef-d0e31224517f">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<textField evaluationTime="Master">
+									<reportElement mode="Opaque" x="0" y="0" width="55" height="30" uuid="946b3fe3-0159-4418-84c7-cdb84b93f527"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[($P{ARAUJO_TEM} && !$P{SUPER_VENDEDOR}) ? "Pré-Pedido" : $P{VENCIMENTO_CURTO} ? "Validade" : ""]]></textFieldExpression>
+								</textField>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField textAdjust="StretchHeight">
+									<reportElement x="0" y="0" width="55" height="30" backcolor="#FFFFFF" uuid="3d55ee5a-723e-448a-b81d-0c6fb9bfd04b">
+										<printWhenExpression><![CDATA[($F{numPrePedido} != null && !$F{numPrePedido}.isEmpty()) || ($F{dataValidadePedidoVencCurtoFormat}  != null && !$F{dataValidadePedidoVencCurtoFormat}.isEmpty())]]></printWhenExpression>
+									</reportElement>
+									<box bottomPadding="0">
+										<pen lineWidth="1.0" lineStyle="Solid"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[($P{ARAUJO_TEM} && !$P{SUPER_VENDEDOR}) ? "ARAUJO TEM " +$F{numPrePedido} : $F{dataValidadePedidoVencCurtoFormat} != null ? $F{dataValidadePedidoVencCurtoFormat} : ""]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+				<line>
+					<reportElement x="0" y="26" width="555" height="1" uuid="5d2a2bce-a207-451d-a706-c5e7c4942dd1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement x="0" y="0" width="480" height="25" uuid="d99053af-524d-40c7-9e73-5d834fdc6a43">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[Vá até as seções indicadas e separe os produtos nas quantidades descritas na tabela abaixo:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupFooter"/>
+	<group name="GroupSegundoPasso"/>
+	<group name="GroupTerceiroPasso"/>
+	<group name="GroupTerceiroPassoAraujoTem">
+		<groupHeader>
+			<band height="60">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<printWhenExpression><![CDATA[!$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+				<staticText>
+					<reportElement x="0" y="41" width="372" height="18" uuid="8db1100e-8cef-445c-bacc-73479f879b13">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1. Coloque os produtos e NF (se impressa) na sacola;]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="21" width="270" height="18" uuid="b399947d-1716-4d56-8c1c-78e692ae98bd"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SIGA OS PASSOS ABAIXO:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="-1" y="1" width="556" height="20" uuid="74c913e7-de5f-494c-8305-201006447862"/>
+					<textElement>
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[!$P{VIA_MOTO} ? "Este cliente escolheu retirar o pedido via " + $F{tipoRetirada} +"." : "•    Este cliente escolheu receber o pedido em casa."]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="98" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{pedidoQuatroPontoZero}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="261" y="8" width="100" height="15" uuid="bd09cadd-04dd-40df-a049-3a60821e2d11"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[CLIENTE]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="393" y="26" width="160" height="30" uuid="49e74db1-eca8-44e1-b0b6-27bd662e28fa">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barWidth="30" barHeight="750">
+					<jr:codeExpression><![CDATA[$F{numPedido}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="413" y="6" width="140" height="16" uuid="8decde8c-2340-4c2c-b126-fb9fc70c7644">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PEDIDO " + $F{numPedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="30" width="154" height="30" uuid="68d90470-7c44-4064-ab7b-9fb528633fda"/>
+				<textElement textAlignment="Left">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numPedido}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="261" y="30" width="131" height="30" uuid="84dd3650-df6e-4b85-9467-d5ef64f5d29d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="9" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="66" width="552" height="30" uuid="a8ba14e8-51ac-41df-b281-fe4e5cde39e1"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<textFieldExpression><![CDATA["<b>GRAMPEAR NA SACOLA DO PEDIDO</b>. EMITIDO EM " + $F{filial} + " "+  new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="78" width="553" height="20" uuid="8a6a6fb7-3cfb-4f01-9eed-84757c39e4bb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{CORTE_AQUI}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="4" y="8" width="186" height="15" uuid="bbd088b0-69de-4738-814e-6c423579b0a3">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagamentoEmDinheiro} ? "PEDIDO ENTREGA EXPRESSA DINHEIRO" : "PEDIDO ENTREGA EXPRESSA"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="93">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="44" y="61" width="234" height="30" uuid="99580bad-de28-450f-907c-3cf4122ffe4b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="61" width="42" height="30" uuid="063dd68b-0f5a-4f06-ae97-ebb92456df1c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="43" width="95" height="18" uuid="40bc31eb-c361-4bbf-8240-e483b5e6af03">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{CONTAINS_ITEM_NORMAL}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="styled">
+					<font fontName="DejaVu Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ONDE GUARDAR]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement isPrintRepeatedValues="false" x="278" y="71" width="119" height="20" uuid="7430a2cb-141f-4b99-b3e1-6d77ed4cf5cc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{CONTAINS_ITEM_NORMAL}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PRATELEIRA "+$F{numPrateleira}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="397" y="61" width="160" height="30" uuid="a1cbb6eb-b789-4054-ac08-1560b160e3e8">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barWidth="30" barHeight="750">
+					<jr:codeExpression><![CDATA[$F{numPedido}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="2" y="43" width="269" height="17" uuid="eb375609-12ab-49f8-a68a-5113c8103220">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Olá " +$F{nomeVendedor} + ", Vamos começar ?"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="417" y="41" width="140" height="16" uuid="d649394e-ea8f-4062-9d26-3527b5617c1e">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pedido: " + $F{numPedido}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="2" y="3" width="319" height="19" forecolor="#FFFFFF" backcolor="#000000" uuid="f0e9a39a-c5ae-4ac0-906b-3588ddb67ccd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="6" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MSG_NOVA_COMANDA}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="321" y="3" width="236" height="19" forecolor="#FFFFFF" backcolor="#000000" uuid="b45159a7-0342-40a2-a8d2-39a91f7cc99e"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{canalVenda}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="32">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{HAS_CANHOTO} && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="32" uuid="3e1e1621-afc0-43ca-b77b-6312a134a974"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true'>2. Vacina / Controlado / Antibiótico / Refrigerado: </style>Recorte os canhotos na linha pontilhada e grampeie na sacola. Lembre-se de armazenar no local indicado;"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="18">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{CONTAINS_ITEM_NORMAL} && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="18" uuid="c4be746f-d315-47af-8a08-a284635bd576">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[($P{ISRAPPIORIFOOD}  ?  "2. "  :   "3. ") + "Produtos que podem ficar na prateleira: Grampeie a comanda na sacola e armazene na " +   "<style isBold='true'>"+ "PRATELEIRA " + $F{numPrateleira}   + "</style>;"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="23">
+			<printWhenExpression><![CDATA[!$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="70" height="20" uuid="4be2f05c-0ffa-4a9c-b6a6-579f2fef59ef"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{ISRAPPIORIFOOD}  || (!$P{CONTAINS_ITEM_NORMAL}  &&  $P{CONTAINS_ITEM_ESPECIAL}) ) ? "3. Prontinho!" : "4. Prontinho!"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="0" width="430" height="20" uuid="d59892f1-e558-455a-a625-c4d3af1ef105"/>
+				<text><![CDATA[O cliente receberá uma notificação informando que já pode buscar o pedido.]]></text>
+			</staticText>
+		</band>
+		<band height="25">
+			<printWhenExpression><![CDATA[($P{ISCONTROLADO}) || ($P{ISANTIBIOTICO})  || ($P{ISVACINA})   || ($P{ISRAPPIORIFOOD})  && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="80" y="0" width="293" height="25" uuid="af2a698c-5741-4371-a5ff-34c86bd64ca0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[, OBSERVE AS INSTRUÇÕES: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="25" uuid="0bdcbda8-fb6f-4a0c-a992-26a32af92b82">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NA ENTREGA]]></text>
+			</staticText>
+		</band>
+		<band height="28">
+			<printWhenExpression><![CDATA[$P{ISVACINA} && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="26" uuid="36448a5e-c190-436d-b8ea-8c290497d616"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true'>Vacina:</style> Com a chegada do cliente, direcione-o para o farmacêutico e informe que ele deverá realizar o pagamento do serviço de aplicação da vacina; "]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="41">
+			<printWhenExpression><![CDATA[($P{ISCONTROLADO}) || ($P{ISANTIBIOTICO}) && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="40" printWhenGroupChanges="GroupTerceiroPasso" uuid="56055020-6c8b-4821-92c0-5945f55d8c34"/>
+				<textElement markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>CONTROLADO/ANTIBIÓTICO:</style> " + ( $F{superVendedor} ?
+"As captações já foram realizadas. Com a chegada do cliente, basta validar a entrega do pedido." :
+    ($F{pedidoQuatroPontoZero} ?
+        ($F{receitaDigital} ?
+        "Este é um pedido de RECEITA DIGITAL." :
+        "Este é um pedido de RECEITA FÍSICA. Agora, o motociclista será acionado. Com a chegada do motociclista na loja, receba e valide a receita entregue e proceda com a captação no menu de Entrega do Pedido, no Painel do CLIQUE RETIRE.")
+        : "Com a chegada do cliente, valide a receita apresentada e proceda com a captação no menu de entrega do pedido."
+    )
+)]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ISRAPPIORIFOOD} && !$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="30" uuid="19a59625-6eb5-4baa-a329-64c41b8a5cd7">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+$F{canalVenda} + ":</style> Com a chegada do entregador, solicite o código PIN e entregue o pedido."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="334">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[$F{pedidoQuatroPontoZero} && !$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="70" width="554" height="13" uuid="1f089082-9ca5-47c4-a2e3-2395f332ddfd">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<text><![CDATA[ESSE CLIENTE ESCOLHEU RECEBER O PEDIDO <b>VIA MOTOCICLISTA . SIGA OS PASSOS ABAIXO.</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="4" width="547" height="26" uuid="536b3818-3d41-483e-a973-f40928e96d54">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="DejaVu Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEDIDO COM ENTREGA EXPRESSA.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="112" width="547" height="26" uuid="167f2faa-21ac-4768-a00a-4ef67be3dc53">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<text><![CDATA[<b>2. Controlado / Antibiótico / Refrigerado</b> recorte os canhotos na linha pontilhada e grampeie na sacola. Lembre-se de armazenar no local indicado;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="142" width="343" height="13" uuid="ceea7f80-c603-4031-9c03-0a379ee3d5a2">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<text><![CDATA[<b>3.</b> Produtos que podem ficar na prateleira, armazene na prateleira]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="6" y="159" width="547" height="30" uuid="4dafc73d-c2b6-4fbb-b4e0-c41c99a9b090">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA[$F{receitaDigital} ? "<b>4. Estamos quase lá!</b> Agora, o motociclista receberá uma notificação informando que já pode buscar o pedido na loja e realizar a entrega na casa do cliente." : "<b>4. Estamos quase lá!</b> Agora o motociclista receberá uma notificação informando que já pode ir buscar a receita na casa do cliente;"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="246" width="544" height="16" uuid="198fe935-e3e6-43fa-97f9-031c698a52af">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[<b>NA ENTREGA, </b>OBSERVE AS INSTRUÇÕES:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="306" y="137" width="20" height="30" uuid="a7b81ced-f3c4-41fb-8d91-8c8e0b2ce9fc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{numPrateleira} != null && !$F{numPrateleira}.isEmpty())]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numPrateleira}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="30" width="552" height="20" uuid="1a2d5b47-a4cd-49e5-95d5-6f5ccc041288"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font fontName="DejaVu Sans" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receitaDigital} ? "APÓS A EMISSÃO DA NF, AGUARDE O MOTOCICLISTA." : "APÓS O REGISTRO, AGUARDE O MOTOCICLISTA."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" x="6" y="189" width="547" height="43" uuid="f0e0df93-70f4-4099-8e17-d1b80b55e9c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{pedidoQuatroPontoZero} && !$F{receitaDigital}]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="html"/>
+				<text><![CDATA[<b>5.</b> Aguarde o motociclista retornar para a loja com a receita do cliente;<br/>
+<b>6.</b> Libere o motociclista e realize a conferência dos dados da receita;<br/>
+<b>7.</b> Em seguida, realize a emissão da NF no menu 3º Entregar Pedido. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="15" y="266" width="522" height="30" printWhenGroupChanges="GroupSegundoPasso" uuid="74280ccd-7091-4953-b179-d2731b58b75a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pedidoQuatroPontoZero} && !$F{receitaDigital} ? ". Solicite o código do pedido e faça a entrega no menu 3º Entregar Pedido. Destaque a comanda do canhoto." : ". Solicite o código do pedido e faça a entrega. Destaque a comanda do canhoto."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="301" width="546" height="30" uuid="eb9e46b5-c184-4fdf-8826-81c5749369d4">
+					<printWhenExpression><![CDATA[$F{pacientes} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["<b>Paciente(s)</b><br/>"  + $F{pacientes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="94" width="548" height="13" uuid="921ea0f1-5bd0-4329-8e0c-71a76c32a217">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. Embale os produtos com NF(se impressa) e grampeie o canhoto acima da sacola;]]></text>
+			</staticText>
+		</band>
+		<band height="277">
+			<printWhenExpression><![CDATA[$F{pagamentoEmDinheiro}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="556" height="35" uuid="16b7d104-57c5-4a3b-87db-ec029fef47c1">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEDIDO COM ENTREGA EXPRESSA, PAGAMENTO EM DINHEIRO.
+APÓS O REGISTRO, AGUARDAR O MOTOCICLISTA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="556" height="30" uuid="c254197f-6865-4ef0-8cce-5d6bd80c6ecd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<text><![CDATA[ESTE CLIENTE ESCOLHEU RECEBER O PEDIDO	<b>VIA MOTOCICLISTA COM PAGAMENTO EM DINHEIRO. SIGA OS PASSOS ABAIXO.</b>]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="6" y="76" width="553" height="139" uuid="17f85f9c-6376-4376-b488-57e2fea7cc1d"/>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["1. <b>Faça o registro do pedido,</b> vá ao menu no item 2, Registrar Pedido;<br/>" + 
+"2. <b>Coloque os produtos e o canhoto acima na sacola</b>;<br/>"+
+"3. <b>Controlado / Antibiótico / Refrigerado</b> recorte os canhotos na linha pontilhada e grampeie na sacola. Lembre-se de armazenar no local indicado;<br/>"+
+"4. Produtos que podem ficar na prateleira, armazene na <b>[PRATELEIRA " + $F{numPrateleira}+"]</b>;<br/>"+
+"5. <b>Estamos quase lá!</b> Agora o <b>motociclista</b> receberá uma notificação informando que já pode vir na loja buscar esse pedido;<br/>"+
+"6. Com a chegada do motociclista vá ao menu <b>Entregar pedido</b> e siga as instruções;<br/>"+
+"7. Vá juntamente com o motociclista até o caixa da loja e acompanhe o pagamento;<br/>"+
+"8. Certifique-se que o <b>pagamento foi realizado e o cupom impresso;</b><br/>"+
+"9. <b>Coloque o cupom na sacola e feche.</b> Motociclista liberado para entrega."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="4" y="220" width="547" height="30" backcolor="#F3F3F3" uuid="4991cd1b-7746-44bc-bd61-0ef280511c1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL DO PEDIDO " + $F{valorTotalPedido} + " • TROCO ESPERADO: "+ $F{troco}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="521" y="220" width="30" height="30" uuid="999eedc4-87db-4e09-b51a-7f51d6e844d1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{EXCLAMACAO_CINZA_DIREITA}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="4" y="220" width="30" height="30" uuid="d685ef8c-55bf-4e83-b840-8403e8db3cd4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{EXCLAMACAO_CINZA_ESQUERDA}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="71">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="555" height="17" isPrintInFirstWholeBand="true" forecolor="#FFFFFF" backcolor="#000000" uuid="1841d61c-5ff5-46aa-9e2a-ca2d7eaaba1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{HAS_CANHOTO}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERÁ IMPRESSA UMA FOLHA COM CANHOTOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="230" height="20" uuid="7c1e0742-b738-4751-a862-197226d0adb7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[USO INTERNO! NÃO ENTREGUE AO CLIENTE. RETIRADA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="40" width="325" height="20" uuid="6d581af6-7b31-40e5-9db7-3110aeb32613"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{filial}  + " – EMITIDO EM  " +  new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

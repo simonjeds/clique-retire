@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "clique-retire-hml",
+  "private_key_id": "2b6d66ddea166ef2f58091cb4c5074367979aa28",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCrzCiL5L8fVhoT\nC7sOOblroZ65v//iKKCu+TA2RNF+U1BQztVy9YwRL7q62PKsJpsl2xWDmYety0eq\n0pm5kUFaKLGD/U+d/A9lxliB+fJu6XzqEL9UA3VMi5aAyEXHMlRktSZa0Q6Trf8T\nMV2NOXsNFuoMgQSihq99qiqnGDeEBpZsbtc/ZKYBxCV6bQXevtLRlRNffViGdZVN\n46DyIjau1hEC9cTVZRuqNcR9ZpeOMozHivkWT3iwywefkEzua80rUIZ9CdHj/HIf\n23yUtEfVcBbaHnpeiYCOFIPQmVtwhi8XluhqFt58ZKNoRhpnskDNvz3NisJ2baI+\nz19ZmT1zAgMBAAECggEAK0Vp9QpxpTfvq1pqDAQ4EscLjqewkMtA5bF4FkMxLQtZ\nEHF4S9NTK0UFWGiqfvfeXiOXgKUcCodIDtuqwpW2iznytFcKRbWmPzE9O8ez64G9\n58q+FjAkzFngV6GaCblAjnkeJwO/Ey1hMPlfIeIXf02FOA8LFtCrxRAmXB36ZbNF\nYERN6FrC70eTpEJUnDyRYQ0AgsmogyU6msbUI1AQnm9Fev8Oi0TPdxxt9HkVksmK\nx73cMxurc+MAP3w7ZdODqIbxLQNBNRzV+py+6DUeaipLs5bPagRj1PJjP4IYMXIN\nnNUPI92xU+ut8k032E8DhWhtyOyKcXogSLauimE3gQKBgQDYSOV/ogpQWOSGpL4R\n5c8+R7bSZIeErh2QgT9w97xlJISp3UQEsU0/xLuy7kpOJtCu0Gxd555j+Pg15AQX\nfvyyktmTAFzVYZY0+rrVqxpHp2MReLK12w3QKUQvg2hhTaf59Qg9WVZexpWNfSJT\nH9w05MBbNyixvWOg3TId4kUZQQKBgQDLWAHHc8eOl0tcFp5Ej8j0T1U6FQ7+R5NH\n56aLyWMy2U4J87ufAncR+dtSYukTozpjkTfi1R3BnU/0smfbw4nRUSGkoGqTQzOG\nPthT1XSdinyHm5nn1E0mcJjOO0YK2Jf35LbV+pPI3sBeu0cazTZHpIK0eZgXbBec\nMLtWomZVswKBgQCTr9s+dxiR2tFZe37qW8FTJscZDVpYaEh51zfJ3PCBJBmOoC+F\nAMjeBWmh+gM1MF4JMPr+eF14qJZcvjFpFeZZzdrR/UpmzncyAA+6PVb5nLwSPxfR\nBB5/iN4tj46j+tH75azVr35Bw1p1vf/FQRkt6RHMd3LLQ6aXPtOtAkfqwQKBgQCp\nlgc90ZiPmixWa+Ko6YW+A1/f5eowNX9mi5LBqD5cDRFhiW1jasnlKw04A5fBMfOj\nUFxciEKd09X4DMZDaSvKbzBwvPzFPll9T3JZUH9GWFYNPr83sj55nZRDAvoiV4s+\nSfgWMzoHX4buOqBNgPIRA+miHHq0pgh20cmbsitIswKBgHWDaGo8CC+8XwXlG+57\nr7e5nqSFVTNTO5Eqtss2vpNm1VIW+NdUxo/Ks+JD+YgO4QGTu6YyQhOtCE6Ez4E2\nqtqfvq2vk4ACp/gqyA0y49IBNnhDbQ/Fv7GTURahjQ4TXcE9QkcEaezWEZh3cAR5\nBnwn8jPpWsVPW703Mi0s1IGv\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-kcgrh@clique-retire-hml.iam.gserviceaccount.com",
+  "client_id": "112207458072586765637",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-kcgrh%40clique-retire-hml.iam.gserviceaccount.com"
+}
